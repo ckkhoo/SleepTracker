@@ -9,10 +9,10 @@ interface SleepDAO {
     suspend fun insertSleep(sleep: Sleep) //suspend fun = makes this function as a call routine (co-routine?), put them in separate train
 
     @Query("SELECT * FROM sleep")
-    suspend fun getSleep(): LiveData< List<Sleep> >
+    fun getSleep(): LiveData< List<Sleep> >
 
     @Query("SELECT * FROM sleep WHERE id = :sleep_id")
-    suspend fun getASleep(sleep_id: Int)
+    fun getASleep(sleep_id: Int): Sleep
 
     @Update
     suspend fun updateSleep(sleep: Sleep)

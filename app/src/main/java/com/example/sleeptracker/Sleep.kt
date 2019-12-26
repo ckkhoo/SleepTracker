@@ -5,11 +5,9 @@ import androidx.room.PrimaryKey
 import java.sql.Date
 
 @Entity(tableName = "sleep")
-class Sleep (
+data class Sleep (
     @PrimaryKey(autoGenerate = true) val id: Int,
-    val startDate: Date,
-    val endDate: Date,
-    val sleepQuality: Int
-) {
-
-}
+    val startDate: Long = System.currentTimeMillis(),
+    val endDate: Long,
+    val sleepQuality: Int //1 to 5
+)

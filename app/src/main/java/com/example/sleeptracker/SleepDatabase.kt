@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-//@Database(entities = arrayOf(Sleep::class, People::class, Product::class), version = 1)
+//@Database(entities = [Sleep::class, People::class, Product::class], version = 1)
 @Database(entities = arrayOf(Sleep::class), version = 1)
 abstract class SleepDatabase: RoomDatabase() {
     //Create an instance of the DAO
