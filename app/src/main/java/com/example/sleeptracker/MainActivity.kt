@@ -1,5 +1,6 @@
 package com.example.sleeptracker
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -25,11 +26,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*
     override fun onActivityResult(requestCode: Int,
                                   resultCode: Int,
                                   data: Intent?) {
+        if(requestCode == REQUEST_CODE) {
+            if(resultCode == Activity.RESULT_OK) {
 
+            }
+        }
     }
+    */
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
