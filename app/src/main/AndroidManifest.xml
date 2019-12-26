@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecordSleepActivity"></activity>
+        <activity android:name=".RecordSleepActivity">
+            android:parentActivityName=".MainActivity"
+            android:label="@string/add">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

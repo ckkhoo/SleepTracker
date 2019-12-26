@@ -21,8 +21,14 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
 
             val intent = Intent(this, RecordSleepActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, REQUEST_CODE)
         }
+    }
+
+    override fun onActivityResult(requestCode: Int,
+                                  resultCode: Int,
+                                  data: Intent?) {
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -39,5 +45,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    companion object {
+        const val REQUEST_CODE = 1
     }
 }
